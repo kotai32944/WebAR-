@@ -1,0 +1,10 @@
+# Pythonの仮想環境を無視
+venv/
+.venv/
+env/
+# Pythonのキャッシュを無視
+__pycache__/
+*.pyc
+# OSの不要なファイル
+.DS_Store
+Thumbs.db

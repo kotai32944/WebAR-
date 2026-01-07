@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>AR.js Custom Marker WebAR</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded 
+           arjs="sourceType: webcam; 
+                 debugUIEnabled: false; 
+                 detectionMode: mono; 
+                 patternRatio: 0.5; 
+                 trackingMethod: best;"
+           vr-mode-ui="enabled: false">
+
+    <a-assets>
+      <img id="ov0" src="overlay_0.png">
+      <img id="ov1" src="overlay_1.png">
+      <img id="ov2" src="overlay_2.png">
+    </a-assets>
+
+    <a-marker type="pattern" url="pattern-marker_custom_0.patt">
+      <a-image src="#ov0" position="0 0 0" rotation="-90 0 0" width="1.8" height="1.8"></a-image>
+    </a-marker>
+
+    <a-marker type="pattern" url="pattern-marker_custom_1.patt">
+      <a-image src="#ov1" position="0 0 0" rotation="-90 0 0" width="1.8" height="1.8"></a-image>
+    </a-marker>
+
+    <a-marker type="pattern" url="pattern-marker_custom_2.patt">
+      <a-image src="#ov2" position="0 0 0" rotation="-90 0 0" width="1.8" height="1.8"></a-image>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
